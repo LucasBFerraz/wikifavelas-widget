@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Widget Test</title>
+</head>
+
+<body>
+  <script>
+    // Replace these values with your actual n8n instance URL and auth token
+    window.ChatWidgetConfig = {
+      baseUrl: "https://n8n.mauriciomilano.com",
+      auth: "seu-token", // opcional
+      widgetTitle: "Meu Assistente",
+      widgetSubtitle: "Powered by AI",
+      inputPlaceholder: "Pergunte algo...",
+      welcomeMessage: "Olá! Como posso ajudar?",
+      position: "bottom-left",
+      panelWidth: 400,
+      panelHeight: 600,
+      accentColor: "#940eed",
+      apiTimeoutMs: 60000,
+      autoOpen: true,
+      showStreamingToggle: false,
+    };
+  </script>
+  <!-- <script src="../dist/chat-widget.js"></script> -->
+  <script src="https://chat-widget.mauriciomilano.com/chat-widget.js?v=2"></script>
+</body>
+
+</html>
