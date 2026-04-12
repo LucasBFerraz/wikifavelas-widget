@@ -8,26 +8,30 @@
 </head>
 
 <body>
-  <script>
-    // Replace these values with your actual n8n instance URL and auth token
+<script>
     window.ChatWidgetConfig = {
-      baseUrl: "https://n8n.mauriciomilano.com",
-      auth: "seu-token", // opcional
-      widgetTitle: "WikiFavelas AI Chat",
-      widgetSubtitle: "Powered by Lucas Ferraz - Sistemas de Informação - UFF",
-      inputPlaceholder: "Pergunte algo...",
-      welcomeMessage: "Olá! Como posso ajudar?",
-      position: "bottom-left",
-      panelWidth: 400,
-      panelHeight: 600,
-      accentColor: "#940eed",
-      apiTimeoutMs: 60000,
-      autoOpen: true,
-      showStreamingToggle: false,
+        webhook: {
+            url: 'https://n8n.mauriciomilano.com/webhook-test/chat',
+            route: 'general'
+        },
+        branding: {
+            logo: 'https://wikifavelas.com.br/images/thumb/3/3f/Logo-pipa-wikifavelas.png/100px-Logo-pipa-wikifavelas.png',
+            name: 'Wikifavelas',
+            welcomeText: 'Olá 👋, como posso de ajudar hoje?',
+            responseTimeText: 'Segura aí um pouquinho...'
+        },
+        style: {
+            primaryColor: '#854fff',
+            secondaryColor: '#6b3fd4',
+            position: 'right', // 'left' or 'right'
+            backgroundColor: '#ffffff',
+            fontColor: '#333333'
+        }
     };
-  </script>
-  <!-- <script src="../dist/chat-widget.js"></script> -->
-  <script src="https://chat-widget.mauriciomilano.com/chat-widget.js?v=2"></script>
+</script>
+
+<!-- Widget Script -->
+<script src="https://cdn.jsdelivr.net/gh/juansebsol/n8n-chatbot-template@latest/chat-widget.js"></script>
 </body>
 
 </html>
